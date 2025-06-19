@@ -70,7 +70,7 @@ export const AboutPage = () => {
           <Subtitle>Sobre mí</Subtitle>
 
           <PaperStyled>
-            👋 ¡Hola! Mi nombre es Navpreet Estuardo Gojlia Once. Soy
+            ¡Hola! Mi nombre es Navpreet Estuardo Gojlia Once. Soy
             desarrollador FullStack con una formación sólida en desarrollo de
             aplicaciones multiplataforma, obtenida en el C.I.D.E. de Palma de
             Mallorca, donde cursé el Grado Superior en Desarrollo de

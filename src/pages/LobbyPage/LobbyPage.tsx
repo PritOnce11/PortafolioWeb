@@ -82,7 +82,7 @@ export const LobbyPage = () => {
             <Title>Navpreet Once</Title>
             <Text>Desarrollador FullStack</Text>
             <PaperStyled>
-              👋 ¡Hola! Soy Navpreet Once, desarrollador FullStack con experiencia
+              ¡Hola! Soy Navpreet Once, desarrollador FullStack con experiencia
               en React, Node y .NET. Me apasiona crear soluciones eficientes y
               seguir creciendo profesionalmente asumiendo nuevos retos. Aquí
               podrás conocer mi trabajo, intereses y trayectoria.

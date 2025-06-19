@@ -29,15 +29,15 @@ const ContentContainer = styled("div")`
 `;
 
 const ReposContainer = styled("div")`
-  flex: 1;
-  min-height: 680px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 32px 0;
+  box-sizing: border-box;
 `;
+
 
 const Subtitle = styled("h2")`
   font-size: 2rem;
@@ -46,10 +46,15 @@ const Subtitle = styled("h2")`
   margin: 0;
 `;
 
+const CardWrapper = styled("div")`
+  width: 100%;
+  height: 280px; // o el alto que desees
+  display: flex;
+`;
+
+
 export const ProjectsPage = () => {
-
   const [repos, setRepos] = useState<Repo[]>([]);
-
 
   useEffect(() => {
     fetch(import.meta.env.VITE_GITHUB_ENDPOINT)
@@ -69,14 +74,14 @@ export const ProjectsPage = () => {
         <Subtitle>Proyectos</Subtitle>
         <ReposContainer>
           {repos.map((repo) => (
-            <CustomCard
-              key={repo.id}
-              title={repo.name}
-              description={repo.description}
-            />
+            <CardWrapper key={repo.id}>
+              <CustomCard
+                title={repo.name}
+              />
+            </CardWrapper>
           ))}
         </ReposContainer>
       </ContentContainer>
     </Container>
-  )
-}
+  );
+};

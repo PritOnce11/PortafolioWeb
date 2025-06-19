@@ -8,18 +8,18 @@ import Typography from '@mui/material/Typography';
 type CustomCardProps = {
   image?: string;
   title: string;
-  description: string;
+  description?: string;
 };
 
 export default function CustomCard({ image, title, description }: CustomCardProps) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
       <CardMedia
         sx={{ height: 140 }}
         image={image}
         title={title}
       />
-      <CardContent>
+      <CardContent sx={{ flexGrow: 1 }}>
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
